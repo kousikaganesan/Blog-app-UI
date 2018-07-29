@@ -1,0 +1,31 @@
+<div class="back-ground">
+<div class="intro">
+    <h2>Create your blog and share your voice</h2>
+    <h4 class="intro-content">
+        Plug into the biggest community of publishers online.<br> "Blogsite" has millions of users waiting to find you. <br>        All the features you need and more. <br> Choose the most popular blogging software on the web for your online home.
+    </h4>
+</div>
+<h2 class="popular"><span>Popular Blogs</span></h2>
+<div class="card-padding blog-tile">
+    <div class="row margin-0">
+        <div class="col-sm-6 popular-content " *ngFor="let blog of popularBlog">
+
+            <mat-card (click)="showBlog(blog)">
+                <mat-card-title>
+                    {{blog.title}}
+                    <div class="date"> {{blog.createdDate | timeAgo}}</div>
+                </mat-card-title>
+                <mat-card-content>
+                    {{blog.articleBody}}
+                </mat-card-content>
+                <mat-card-actions class="action-card">
+                    <i class="material-icons likes">favorite</i>&nbsp; {{blog.likeCount}} &nbsp;&nbsp;
+                    <mat-chip-list>
+                        <mat-chip class="chips" *ngFor="let key of blog.keyWords">{{key}}</mat-chip>
+                    </mat-chip-list>
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+</div>
+</div>

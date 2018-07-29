@@ -1,0 +1,39 @@
+.blog-container{
+padding :20px;
+}
+.blog-title{
+    text-align: center;
+}
+.account{
+    color: black;
+    font-size: 91px !important;
+}
+.like{
+    font-size: 30px !important;
+    cursor: pointer;
+}
+.unlike{
+    cursor: pointer;
+}
+
+.like-items{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 16px;
+}
+
+.creator{
+ text-transform: capitalize;
+}
+.account-card{
+    margin-top: 54px;
+    padding-top: 0px;
+    text-align: center;
+}
+
+.comments{
+    display: flex;
+    align-items: center;
+    margin: 35px 0px 0px;
+}

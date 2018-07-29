@@ -1,0 +1,27 @@
+<div class="container" >
+    <!--*ngIf= "{{isLoggedIn}}"-->
+<mat-sidenav-container class="side-nav-container">
+<mat-sidenav class="side-nav" #sidenav mode="side" opened="true" class="side-nav-width">
+    <mat-list>
+        <mat-list-item  [routerLink] = "['../profile']">
+            Profile
+        </mat-list-item>
+        <mat-list-item>
+            My Blogs
+        </mat-list-item>
+        <mat-list-item>
+            Explore
+        </mat-list-item>
+        <mat-list-item>
+            Comments
+        </mat-list-item>
+        <mat-list-item>
+            Settings
+        </mat-list-item>
+    </mat-list>
+</mat-sidenav>
+</mat-sidenav-container>
+
+<div class="content-width">
+</div>
+</div>

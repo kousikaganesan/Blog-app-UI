@@ -1,0 +1,44 @@
+<div class="row margin-0">
+    <div class="col-sm-6 blog-item">
+        <mat-card class="blog-card">
+            <i class="material-icons">collections_bookmark</i>&nbsp;Blogs created : {{myBlogs.length}}
+        </mat-card>
+    </div>
+    <div class="col-sm-6  blog-item">
+        <mat-card class="blog-card" (click)="createBlog()">
+            Create a new Blog &nbsp;<i class="material-icons">launch</i>
+        </mat-card>
+    </div>
+</div>
+
+<h2 class="popular">
+    <span>My Blogs</span></h2>
+<div class="card-padding blog-tile">
+    <div class="row margin-0">
+        <div class="col-sm-6 popular-content " *ngFor="let blog of myBlogs">
+
+            <mat-card>
+                <div class="custom">
+                    <i class="material-icons view" matTooltip="View Blog" (click)="showBlog(blog)">pageview</i>&nbsp;&nbsp;
+                    <i class="material-icons delete" matTooltip="Delete" (click)="deleteBlog(blog)">delete</i>&nbsp;&nbsp;
+                    <i class="material-icons edit" matTooltip="Edit" (click)="editBlog(blog)">edit</i>&nbsp;
+                </div>
+
+                <mat-card-title>
+                    {{blog.title}}
+                    <div class="date"> {{blog.createdDate | timeAgo}}</div>
+                </mat-card-title>
+                <mat-card-content>
+                    {{blog.articleBody}}
+                </mat-card-content>
+                <mat-card-actions class="action-card">
+                    <i class="material-icons likes">favorite</i>&nbsp; {{blog.likes.length}} &nbsp;&nbsp;
+                    <mat-chip-list>
+                        <mat-chip class="chips" *ngFor="let key of blog.keyWords">{{key}}</mat-chip>
+                    </mat-chip-list>&nbsp;
+
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+</div>

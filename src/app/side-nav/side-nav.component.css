@@ -1,0 +1,21 @@
+.container{
+    display: flex;
+}
+.container .side-nav-container{
+        height: 35em;
+        width: 20% !important;
+        background-color: pink;
+}
+.container .side-nav-width{
+        width: 100% !important;
+        background-color: pink;
+}
+.container .content-width{
+        width: 80%;
+}
+.container mat-sidenav-content{
+    margin: 0px!important;
+}
+.container mat-list-item{
+    outline: none;
+}

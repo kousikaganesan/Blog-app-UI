@@ -1,0 +1,14 @@
+<h2> Signup</h2>
+<mat-form-field>
+    <input matInput placeholder="Enter your Username" value="name" [(ngModel)]="user.name" required>
+</mat-form-field>
+<mat-form-field>
+    <input matInput placeholder="Enter your email Id " value="email" [(ngModel)]="user.email" required>
+</mat-form-field>
+<mat-form-field>
+    <input type="password" matInput placeholder="Enter your password" value="password" [(ngModel)]="user.password" required>
+</mat-form-field>
+<mat-form-field>
+    <input type="password" matInput placeholder="Confirm password" value="password" [(ngModel)]="user.repassword" required>
+</mat-form-field>
+<button mat-raised-button color="primary" (click)="signup(user)">Signup</button>

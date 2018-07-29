@@ -1,0 +1,28 @@
+
+    <input placeholder="Search" class="search-input-box" value="searchValue" [(ngModel)]="searchValue" (keyup)="search()">
+
+<div *ngIf="searchedBlog" class="search-result">
+    <h2 class="popular"><span>Search Results</span></h2>
+    <div class="card-padding blog-tile">
+        <div class="row margin-0">
+            <div class="col-sm-6 popular-content " *ngFor="let blog of searchedBlog">
+
+                <mat-card (click)="showBlog(blog)">
+                    <mat-card-title>
+                        {{blog.title}}
+                        <div class="date"> {{blog.createdDate | timeAgo}}</div>
+                    </mat-card-title>
+                    <mat-card-content>
+                        {{blog.articleBody}}
+                    </mat-card-content>
+                    <mat-card-actions class="action-card">
+                        <i class="material-icons likes">favorite</i>&nbsp; {{blog.likes.length}} &nbsp;&nbsp;
+                        <mat-chip-list>
+                            <mat-chip class="chips" *ngFor="let key of blog.keyWords">{{key}}</mat-chip>
+                        </mat-chip-list>
+                    </mat-card-actions>
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

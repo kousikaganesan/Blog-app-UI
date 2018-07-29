@@ -1,0 +1,63 @@
+.date{
+    font-size: small;
+}
+
+.main-page mat-card{
+    width: 50%
+}
+mat-card-content{
+    height: 40px;
+    overflow: hidden;
+}
+.card-padding{
+    padding: 10px;
+}
+.action-card{
+    display: flex;
+    align-items: center;
+}
+
+.chips{
+    height: 23px;
+}
+.popular{
+    text-align: center;
+}
+.popular-content{
+ padding: 10px;
+}
+.margin-0{
+    margin: 0px;
+}
+.back-ground{
+background: ghostwhite;
+}
+.custom{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.delete{
+    color: red;
+    cursor: pointer;
+}
+.edit{
+    color: green;
+    cursor: pointer;
+}
+.view{
+      color: blue;
+    cursor: pointer;
+
+}
+.blog-item{
+    padding: 50px 75px;
+    font: icon;
+    text-align: center;
+}
+.blog-card{
+    padding: 35px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

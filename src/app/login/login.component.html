@@ -1,0 +1,47 @@
+<div *ngIf="show">
+    <h2> Login</h2>
+    <mat-form-field>
+        <input matInput placeholder="Enter your email Id " value="email" [(ngModel)]="user.email" required>
+    </mat-form-field>
+    <mat-form-field>
+        <input type="password" matInput placeholder="Enter your password" value="password" [(ngModel)]="user.password" required>
+    </mat-form-field>
+    <span (click)="forgotPassword()" class="forgot-password">Forgot password?</span>
+    <br><br>
+    <button mat-raised-button color="primary" (click)="login(user)">Login</button>
+</div>
+<div *ngIf="!show && resetForm">
+    <i class="material-icons" (click)="backToLogin()">arrow_back</i>
+    <h3> Forgot Password</h3>
+    To reset your account enter your email address, an OTP will be sent to your email.
+    <br><br>
+    <mat-form-field>
+        <input matInput placeholder="Enter your email Id " value="otpEmail" [(ngModel)]="otpEmail" required>
+    </mat-form-field>
+    <br><br>
+    <button mat-raised-button color="primary" (click)="sendOtp(otpEmail)">Send OTP</button>
+
+</div>
+<div *ngIf="!resetForm">
+    <i class="material-icons" (click)="backToLogin()">arrow_back</i>
+    <h3> Reset Password</h3>
+    To reset your account enter your email address, an OTP will be sent to your email.
+    <br><br>
+    <mat-form-field>
+        <input matInput placeholder="Enter your email Id " value="resetEmail" [(ngModel)]="reset.email" required>
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput type="password" placeholder="Enter new password" value="password" [(ngModel)]="reset.password" required>
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput type="password" placeholder="Confirm password" value="repassword" [(ngModel)]="reset.repassword" required>
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput placeholder="Enter OTP password " value="otp" [(ngModel)]="reset.otp" required>
+    </mat-form-field>
+    <br><br>
+    <button mat-raised-button color="primary" (click)="resetPassword(reset)">Reset Password</button>
+    <br><br>
+    <button mat-raised-button color="primary" (click)="resendOTP()">Resend OTP</button>
+
+</div>

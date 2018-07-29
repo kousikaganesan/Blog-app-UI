@@ -1,0 +1,31 @@
+<div class="blog-container">
+    <div class="row">
+
+        <div class="col-sm-3 left-container">
+            <mat-card class="account-card">
+                <i class="material-icons account">account_box</i> {{genre}}
+                <br><span class="creator"> {{creator}}</span>
+                <br> {{blog.createdDate | timeAgo}}
+                <br>
+                <div class="like-items">
+                    <i class="material-icons unlike">favorite_border</i>
+                    <!--<i class="material-icons like">favorite</i>-->
+                    &nbsp;
+                    <span class="like-count">{{blog.likes.length}}</span>
+                </div>
+            </mat-card>
+
+
+        </div>
+        <div class="col-sm-9 right-container">
+            <h1 class="blog-title">{{blog.title}}</h1>
+            <br> {{blog.articleBody}}
+            <br>
+            <h4 class="comments"><i class="material-icons">comment</i> &nbsp;Comments</h4>
+            <mat-form-field>
+                <input matInput placeholder="Comment" value="comment" [(ngModel)]="comment">
+            </mat-form-field>
+            <i class="material-icons">send</i>
+        </div>
+    </div>
+</div>

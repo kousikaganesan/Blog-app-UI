@@ -1,0 +1,15 @@
+<mat-toolbar>
+    <mat-toolbar-row class="tool-bar">
+        <span class="logo"><i class="material-icons">class</i>Blogsite</span>
+        <span class="nav-bar-items"> 
+              <search ></search> 
+            <button mat-button *ngIf="!isLoggedIn" (click)="login()">Login</button>
+            <button mat-button *ngIf="!isLoggedIn" (click)="signup()">Signup</button>
+            <button mat-button *ngIf="isLoggedIn" (click)="logout()">Logout
+<i class="material-icons">exit_to_app</i>
+            </button>
+        </span>
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<router-outlet></router-outlet>

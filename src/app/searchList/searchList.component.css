@@ -1,0 +1,66 @@
+.intro{
+    padding: 20px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+.intro-content{
+    font: icon;
+    line-height: 30px;
+    font-family: 'Roboto', sans-serif;
+}
+.date{
+    font-size: small;
+}
+.main-page{
+    display: flex;
+    flex-wrap: wrap;
+}
+.main-page mat-card{
+    width: 50%
+}
+mat-card-content{
+    height: 40px;
+    overflow: hidden;
+}
+.card-padding{
+    padding: 10px;
+}
+.action-card{
+    display: flex;
+    align-items: center;
+}
+.likes{
+    font-size: 18px;
+}
+.chips{
+    height: 23px;
+}
+.popular{
+    text-align: center;
+}
+.popular-content{
+ padding: 10px;
+}
+.margin-0{
+    margin: 0px;
+}
+.back-ground{
+background: ghostwhite;
+}
+.search-result{
+
+}
+
+.search-result .mat-form-field-underline {
+    background-color: white !important;
+}
+
+
+.search-result .mat-form-field-underline:focus{
+        outline: none !important;
+}
+
+.search-result .mat-form-field-ripple {
+     background-color: white!important;
+}
+
